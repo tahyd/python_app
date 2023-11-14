@@ -10,4 +10,4 @@ main_app.register_blueprint(app3);
 
 if __name__ == '__main__':
     print('Main')
-    main_app.run()
+    main_app.run(port=8081)
