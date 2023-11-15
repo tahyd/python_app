@@ -7,7 +7,13 @@ main_app.config['Debug']= True
 main_app.register_blueprint(app1);
 main_app.register_blueprint(app2);
 main_app.register_blueprint(app3);
+@main_app.route("/welcome")
+def sample():
+    return "Hello World !";
+
+
+
 
 if __name__ == '__main__':
     print('Main')
-    main_app.run(port=8081)
+    main_app.run(port=5000)

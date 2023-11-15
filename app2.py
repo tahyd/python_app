@@ -10,7 +10,7 @@ def welcome(name):
 
 @app1.route('/')
 def home():
-    print('hhhhh')
+    
     return render_template('index.html')
 
 @app1.route("/index")
