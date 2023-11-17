@@ -11,8 +11,9 @@ main_app.register_blueprint(app3);
 def sample():
     return "Hello World  to Python Programing !";
 
-
-
+@main_app.route("/hello1")
+def helloword():
+    return "Hello World !"
 
 if __name__ == '__main__':
     print('Main')
