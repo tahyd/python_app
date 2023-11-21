@@ -7,6 +7,7 @@
     width: 100%;
     background-color:rgb(246, 15, 15);
     color: white;
+    
 }
 .h_title {
     text-align: center;
@@ -35,6 +36,21 @@ li a {
 }
 
 .input_form{
-    margin: 10px;
-    text-align: center;
+    margin: auto;
+    
+    height: 400px;
+    width: 500px;
+    padding: 130px;
+    background-color: aquamarine;
+    box-sizing: border-box;
+
+}
+
+.input_form input{
+
+    display: block;
+    height: 20px;
+
+
+
 }
