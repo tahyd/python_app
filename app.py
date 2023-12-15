@@ -5,11 +5,13 @@ from flask_jwt_extended import get_jwt_identity
 from app1 import app2
 from app2 import app1
 from app3 import app3
+from loansapp import loansapp;
 main_app = Flask(__name__);
 main_app.config['Debug']= True
 main_app.register_blueprint(app1);
 main_app.register_blueprint(app2);
 main_app.register_blueprint(app3);
+main_app.register_blueprint(loansapp);
 
 main_app.config["JWT_SECRET_KEY"] = "super-secret"  # Change this "super secret" with something else!
 
@@ -35,11 +37,10 @@ def create_token():
 def sample():
     print(get_jwt_identity())
     return "Hello World  to Python Programing !";
-
 @main_app.route("/hello1")
 def helloword():
     return "Welcome To Jenkins"
 
 if __name__ == '__main__':
     print('Main')
-    main_app.run(debug=True,port=9090,host="0.0.0.0")
+    main_app.run(debug=True,port=9090)
