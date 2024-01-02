@@ -3,12 +3,12 @@ import pickle
 import json
 app3 = Blueprint('app3',__name__);
 @app3.route("/employee", methods=['POST'])
-def readData():
+def read_data():
     #data=request.get_json();
     data = request.form
     salary ={}
     salary['years'] = data['years']
-    salary['expsal'] = getSalary(data['years']);
+    salary['expsal'] = get_salary(data['years']);
     json_sal = json.dumps(salary);
    # response  = app3.response_class(response=json_sal,status=200,mimetype='application/json')
     return json_sal,200
@@ -16,7 +16,7 @@ def readData():
 
 
 
-def getSalary(years):
+def get_salary(years):
    with open('model_pickle','rb') as f :
       m  = pickle.load(f);
       x= m.predict([[float(years)]])

@@ -18,4 +18,4 @@ print(a not in nums)
 
 nums1 = [10,20,30,40]
 
-print(nums is nums1)  
+print(nums == nums1)  

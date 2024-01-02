@@ -8,6 +8,7 @@ from app3 import app3
 from loansapp import loansapp;
 main_app = Flask(__name__);
 main_app.config['Debug']= True
+main_app.config['WTF_CSRF_ENABLED'] = False
 main_app.register_blueprint(app1);
 main_app.register_blueprint(app2);
 main_app.register_blueprint(app3);
@@ -43,4 +44,4 @@ def helloword():
 
 if __name__ == '__main__':
     print('Main')
-    main_app.run(debug=True,port=9090)
+    main_app.run(debug=True)
