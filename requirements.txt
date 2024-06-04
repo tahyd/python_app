@@ -1,4 +1,4 @@
 flask
 
-scikit-learn==1.1.1
+scikit-learn
 flask-jwt-extended
